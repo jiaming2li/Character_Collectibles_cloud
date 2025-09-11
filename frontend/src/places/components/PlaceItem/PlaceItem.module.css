@@ -1,0 +1,491 @@
+.place-item {
+  margin: 0;
+  width: 100%;
+  height: 450px; /* Fixed height for consistency */
+  list-style: none;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.place-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.place-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.place-item__content {
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.place-item__image {
+  width: 100%;
+  height: 280px !important;
+  min-height: 280px !important;
+  max-height: 280px !important;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.place-item__content .place-item__image img {
+  width: 100% !important;
+  height: 280px !important;
+  max-height: 280px !important;
+  min-height: 280px !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  transition: transform 0.3s ease;
+  background-color: #f8f9fa;
+  display: block !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.place-item:hover .place-item__content .place-item__image img {
+  transform: scale(1.05) !important;
+}
+
+/* Image placeholder styles */
+.image-placeholder {
+  width: 100%;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #6c757d;
+  border: 2px dashed #dee2e6;
+}
+
+.placeholder-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+}
+
+.placeholder-text {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+/* Additional fallback rules to ensure image size is fixed */
+.place-item img,
+.place-item img,
+.place-item__image img,
+.place-item__image img {
+  height: 280px !important;
+  max-height: 280px !important;
+  min-height: 280px !important;
+  object-fit: cover !important;
+}
+
+/* Extra strong rules to override any other styles */
+.place-item .place-item__image,
+.place-item .place-item__image img,
+li.place-item .place-item__image,
+li.place-item .place-item__image img {
+  height: 200px !important;
+  max-height: 280px !important;
+  min-height: 280px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.clickableImage {
+  cursor: pointer;
+}
+
+.photoCountBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+.place-item__info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* Occupy remaining space */
+  gap: 0.25rem; /* Reduced gap between elements */
+  height: 300px; /* Fixed height for content area (450px - 280px image) */
+  justify-content: space-between;
+}
+
+.plush-info-top {
+  flex: 1 1 auto; /* Allow flex, occupy remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.plush-info-bottom {
+  flex: 0 0 auto; /* Fixed size, no flex */
+  margin-top: auto; /* Push to bottom */
+}
+
+.plush-name-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
+.plush-name-link:hover .plush-name {
+  color: #ff6b9d;
+  transition: color 0.3s ease;
+}
+
+.plush-name {
+  font-size: 1.2rem;
+  margin: 0 0 -1rem 0; /* Small bottom margin for proper spacing */
+  font-weight: 600;
+  color: #2c3e50;
+  line-height: 1.3;
+  transition: color 0.3s ease;
+  height: 3.12em; /* Fixed height for 2 lines (2 × 1.3 line-height × 1.2rem) */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.plush-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.plush-brand {
+  background: #e8f5e8;
+  color: #155724;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plush-category {
+  background: #fff3cd;
+  color: #856404;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.plush-description {
+  margin: 0 0 -1.1rem 0; /* Add small bottom margin */
+  color: #7f8c8d;
+  line-height: 1.4;
+  font-size: 0.85rem;
+  /* Increased height to show more content with the larger container */
+  height: 4.2em; /* 3 lines × 1.4 line-height × 1rem */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1 1 auto; /* Allow it to grow and shrink as needed */
+}
+
+.plush-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.3rem 0;
+  padding: 0.5rem 0;
+}
+
+.plush-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.starFilled {
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.starEmpty {
+  color: #e9ecef;
+  font-size: 0.9rem;
+}
+
+.rating-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.plush-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #28a745;
+}
+
+.plush-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin: 0;
+  flex-wrap: wrap;
+  min-height: 60px; /* Ensure buttons have enough space */
+  align-items: flex-end; /* Align to bottom */
+  padding-bottom: 0.5rem; /* Add bottom spacing */
+}
+
+.plush-actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid #6c757d;
+  background: #6c757d;
+  color: white;
+  cursor: pointer;
+}
+
+.plush-actions button:hover {
+  background: #5a6268;
+  border-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+}
+
+.place-item__actions {
+  padding: 0.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  border-top: 1px solid #f1f3f4;
+  background: #f8f9fa;
+}
+
+.place-item__actions button,
+.place-item__actions a {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid #6c757d;
+  background: #6c757d;
+  color: white;
+}
+
+.place-item__actions button:hover,
+.place-item__actions a:hover {
+  background: #5a6268;
+  border-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
+}
+
+.place-item__modal-content {
+  padding: 0;
+}
+
+.place-item__modal-actions {
+  text-align: right;
+  padding: 1rem;
+}
+
+.details-container {
+  padding: 2rem;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.plush-details h3 {
+  margin: 0.75rem 0;
+  color: #2c3e50;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.plush-details p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: #7f8c8d;
+}
+
+.reviews-section {
+  margin-top: 2rem;
+  border-top: 1px solid #e9ecef;
+  padding-top: 1.5rem;
+}
+
+.reviews-section h4 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.review-item {
+  background: #f8f9fa;
+  padding: 1rem;
+  margin: 0.75rem 0;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.review-item p {
+  margin: 0;
+  color: #7f8c8d;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.review-form {
+  padding: 1.5rem;
+}
+
+.rating-input,
+.comment-input {
+  margin: 1rem 0;
+}
+
+.rating-input label,
+.comment-input label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.rating-input select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.rating-input select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.comment-input textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: all 0.3s ease;
+}
+
+.comment-input textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+@media (min-width: 768px) {
+  .place-item__image {
+    height: 280px;
+  }
+  
+  .plush-name {
+    font-size: 1.1rem;
+  }
+  
+  .place-item__actions {
+    padding: 0.75rem 1.5rem 1.5rem;
+  }
+  
+  .plush-stats {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .place-item {
+    height: 450px; /* Keep consistent height on mobile */
+  }
+  
+  .place-item__info {
+    padding: 1rem;
+    height: 170px; /* Keep consistent content height */
+  }
+  
+  .place-item__actions {
+    padding: 0.5rem 1rem 1rem;
+  }
+  
+  .plush-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .plush-meta {
+    gap: 0.5rem;
+  }
+  
+  .plush-actions {
+    flex-direction: column;
+  }
+  
+  .plush-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}

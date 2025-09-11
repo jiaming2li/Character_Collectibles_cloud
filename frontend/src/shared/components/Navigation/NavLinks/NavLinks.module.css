@@ -1,0 +1,135 @@
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links li {
+  margin: 1rem;
+}
+
+.nav-links a {
+  border: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+}
+
+.nav-links a:hover,
+.nav-links a:active,
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nav-links button {
+  cursor: pointer;
+  border: 1px solid #7f8c8d;
+  color: #7f8c8d;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-links button:focus {
+  outline: none;
+}
+
+.nav-links button:hover,
+.nav-links button:active {
+  background: #7f8c8d;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(127, 140, 141, 0.3);
+}
+
+/* Logout button styled like login link */
+.logoutButton {
+  border: 1px solid transparent !important;
+  color: white !important;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  background: transparent !important;
+  font: inherit;
+  cursor: pointer;
+}
+
+.logoutButton:hover,
+.logoutButton:active {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.logoutButton:focus {
+  outline: none;
+  border: 1px solid transparent !important;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .nav-links li {
+    margin: 0 0.5rem;
+  }
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+  }
+
+  .nav-links button {
+    border: 1px solid #7f8c8d;
+    color: #7f8c8d;
+    background: transparent;
+  }
+
+  .nav-links button:hover,
+  .nav-links button:active {
+    background: #7f8c8d;
+    color: white;
+  }
+
+  /* Logout button styled like login link in desktop */
+  .logoutButton {
+    color: white !important;
+    text-decoration: none;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.8);
+    border: 1px solid transparent !important;
+    background: transparent !important;
+  }
+
+  .logoutButton:hover,
+  .logoutButton:active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    color: white !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+}

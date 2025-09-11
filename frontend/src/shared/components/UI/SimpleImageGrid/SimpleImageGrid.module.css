@@ -1,0 +1,115 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+  gap: 1rem;
+  max-width: 1200px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.gridItem {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.gridItem:hover {
+  transform: translateY(-2px);
+}
+
+.imageContainer {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.gridItem:hover .imageContainer {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.nameContainer {
+  padding: 0.75rem 0 0 0;
+  text-align: center;
+}
+
+.itemName {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #212529;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  color: #6c757d;
+  width: 100%;
+}
+
+.emptyState p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6c757d;
+  line-height: 1.4;
+  width: 100%;
+}
+
+/* Responsive design - temporarily commented out, force display 5 columns */
+/*
+@media (max-width: 1024px) and (min-width: 769px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    max-width: 100%;
+    padding: 1rem 0.5rem;
+  }
+  
+  .itemName {
+    font-size: 0.8rem;
+  }
+  
+  .nameContainer {
+    padding: 0.4rem 0 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+  }
+  
+  .itemName {
+    font-size: 0.8rem;
+  }
+  
+  .nameContainer {
+    padding: 0.5rem 0 0 0;
+  }
+}
+*/

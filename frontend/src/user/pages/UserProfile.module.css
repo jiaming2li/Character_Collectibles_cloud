@@ -1,0 +1,738 @@
+/* Main Layout */
+.profileLayout {
+  display: flex;
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 20px;
+  padding-top: 80px;
+  gap: 20px;
+}
+
+/* Left Sidebar */
+.leftSidebar {
+  width: 300px;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  /*position: fixed;*/
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  top: 80px;
+  left: 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* User Name Header */
+.userNameHeader {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.userNameHeader h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #212529;
+}
+
+/* Profile Card */
+.profileCard {
+  padding: 1.5rem;
+  /*border-bottom: 1px solid #e9ecef;*/
+}
+
+.profileImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.profileImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e9ecef;
+}
+
+.editProfileIcon {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.profileInfo {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.profileName {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: #212529;
+}
+
+.profileLocation {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0 0 0.25rem 0;
+}
+
+.profileMemberSince {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin: 0 0 1rem 0;
+}
+
+.profileStats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.profileActions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.followButton, .messageButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  background: white;
+  color: #495057;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.followButton:hover, .messageButton:hover {
+  background: #f8f9fa;
+  border-color: #adb5bd;
+}
+
+.followButton.following {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.followButton.following:hover {
+  background: #218838;
+}
+
+/* Navigation Links */
+.navigationLinks {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 0;
+  background: none;
+  border: none;
+  color: #495057;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #212529;
+}
+
+.navIcon {
+  font-size: 1rem;
+}
+
+/* Sidebar Footer */
+.sidebarFooter {
+  margin-top: auto;
+  padding: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  color: #6c757d;
+  margin: 0 0 1rem 0;
+}
+
+.footerLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footerLink {
+  font-size: 0.75rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.footerLink:hover {
+  color: #495057;
+}
+
+.languageSelector {
+  margin-top: 1rem;
+}
+
+.languageSelect {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  background: white;
+}
+
+/* Right Content Area */
+.rightContent {
+  flex: 5;
+  margin-left: 20px;
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Content Tabs */
+.contentTabs {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  border-bottom: 1px solid #e9ecef;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.tab {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: #6c757d;
+  font-size: 0.875rem;
+  font-weight: 100;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab:hover {
+  color: #495057;
+  background: #f8f9fa;
+}
+
+.tab.active {
+  color: #212529;
+  /*border-bottom-color: #007bff;*/
+}
+
+/* Content Section */
+.contentSection {
+  padding: 2rem;
+  min-height: calc(200vh - 60px);
+}
+
+/* Empty States */
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.emptyState h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #212529;
+}
+
+.emptyState p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.exploreButton, .writeReviewButton {
+  padding: 0.75rem 1.5rem;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.exploreButton:hover, .writeReviewButton:hover {
+  background: #218838;
+}
+
+/* Bottom Promotion Bar */
+.bottomBar {
+  position: fixed;
+  bottom: 20px;
+  left: 430px;
+  right: 20px;
+  background: #28a745;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  z-index: 100;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.promotionLeft, .promotionRight {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.promotionIcon, .appIcon {
+  font-size: 1rem;
+}
+
+.promotionArrow {
+  font-size: 1rem;
+  margin-left: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profileLayout {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .leftSidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+    top: auto;
+    left: auto;
+  }
+  
+  .rightContent {
+    margin-left: 0;
+  }
+  
+  .bottomBar {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  .contentTabs {
+    overflow-x: auto;
+  }
+  
+  .tab {
+    white-space: nowrap;
+    min-width: 100px;
+  }
+}
+
+/* Loading and Error States */
+.loadingContainer {
+  /*display: flex;*/
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f9fa;
+  color: #dc3545;
+  font-size: 1.125rem;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal h3 {
+  margin: 0 0 1rem 0;
+  color: #212529;
+}
+
+.messageTextarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  resize: vertical;
+  margin-bottom: 1rem;
+}
+
+.modalActions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.cancelButton, .sendButton {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #dee2e6;
+}
+
+.cancelButton {
+  background: white;
+  color: #6c757d;
+}
+
+.sendButton {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.cancelButton:hover {
+  background: #f8f9fa;
+}
+
+.sendButton:hover {
+  background: #0056b3;
+}
+
+/* Custom Lists Styles */
+.customListsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.customListsHeader h3 {
+  margin: 0;
+  color: #212529;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+
+.customListsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.customListCard {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.customListCard:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.listHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.listTitle {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #212529;
+}
+
+.listCount {
+  font-size: 0.875rem;
+  color: #6c757d;
+  background: #f8f9fa;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+.listPreview {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  min-height: 60px;
+  align-items: center;
+}
+
+.previewImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.emptyListPreview {
+  width: 100%;
+  height: 60px;
+  background: #f8f9fa;
+  border: 2px dashed #dee2e6;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.listActions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.viewListButton {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.viewListButton:hover {
+  background: #0056b3;
+}
+
+.deleteListButton {
+  padding: 0.5rem 1rem;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.deleteListButton:hover {
+  background: #c82333;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.emptyState .emptyIcon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+}
+
+.emptyState h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #212529;
+}
+
+.emptyState p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+
+.tabContent {
+  padding: 1rem;
+  min-height: calc(100vh - 200px);
+}
+
+/* Navigation Link Active State */
+.navLink.active {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.navLink.active .navIcon {
+  color: #007bff;
+}
+
+/* Custom List Detail View Styles */
+.listDetailView {
+  padding: 0;
+}
+
+.listDetailHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.backButton {
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backButton:hover {
+  background: #e9ecef;
+  color: #212529;
+}
+
+.listDetailHeader h3 {
+  margin: 0;
+  color: #212529;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.listItemCount {
+  padding: 0.25rem 0.75rem;
+  background: #e9ecef;
+  color: #495057;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.emptyListDetail {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 2px dashed #dee2e6;
+}
+
+.emptyListDetail .emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.emptyListDetail h4 {
+  margin: 0 0 1rem 0;
+  color: #495057;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.emptyListDetail p {
+  margin: 0;
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+

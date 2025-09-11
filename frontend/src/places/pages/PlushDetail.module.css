@@ -1,0 +1,1036 @@
+.plushDetail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.backButton {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.plushContent {
+  display: block;
+  margin-top: 0rem;
+  padding-top: 0rem;
+  margin-bottom: 2rem;
+}
+
+/* plushImage styles removed - now using photo gallery at top */
+
+.clickableImage {
+  cursor: pointer;
+}
+
+.photoCountBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  backdrop-filter: blur(4px);
+}
+
+/* New styles: Photo area header */
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 0.5rem;
+}
+
+.sectionHeader h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.photoCount {
+  font-size: 0.9rem;
+  color: #666;
+  background: #f0f0f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+/* No image placeholder */
+.noPhotosPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  color: #666;
+}
+
+.noPhotosPlaceholder p {
+  margin: 0.5rem 0;
+}
+
+/* Photo info overlay */
+.photoInfo {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  backdrop-filter: blur(4px);
+}
+
+/* User photo metadata */
+.photoMeta {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+.plushInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.plushName {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.plushMeta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.plushBrand {
+  background: #ff6b9d;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.plushCategory {
+  background: #667eea;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.plushStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.plushRating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ratingStars {
+  display: flex;
+  gap: 2px;
+}
+
+.starFilled {
+  color: #ffd700;
+  font-size: 1.2rem;
+}
+
+.starEmpty {
+  color: #ddd;
+  font-size: 1.2rem;
+}
+
+.ratingText {
+  font-weight: bold;
+  color: #333;
+}
+
+.reviewCount {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.plushPrice {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ff6b9d;
+}
+
+.plushDescription {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 600px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.plushDescription h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.plushDescription p {
+  margin: 0;
+  line-height: 1.5;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.plushActions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.creatorActions {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.reviewsSection {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.reviewsSection h2 {
+  margin: 0 0 2rem 0;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.loginPrompt {
+  text-align: center;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.loginPrompt p {
+  margin: 0 0 1rem 0;
+  color: #666;
+}
+
+.reviewsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reviewCard {
+  padding: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.reviewerInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.reviewerName {
+  font-weight: bold;
+  color: #333;
+}
+
+.reviewDate {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.reviewRating {
+  display: flex;
+  gap: 2px;
+}
+
+.reviewComment {
+  margin: 0;
+  line-height: 1.6;
+  color: #666;
+}
+
+.noReviews {
+  text-align: center;
+  padding: 3rem;
+  color: #666;
+}
+
+.reviewForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ratingInput,
+.commentInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ratingInput label,
+.commentInput label {
+  font-weight: bold;
+  color: #333;
+}
+
+.ratingInput select {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.commentInput textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.loadingContainer,
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  gap: 1rem;
+}
+
+.errorContainer h2 {
+  color: #333;
+  margin: 0;
+}
+
+/* Photo Gallery Styles */
+.photoGallery {
+  width: 100%;
+  margin-bottom: 1rem;
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.galleryTitle {
+  margin: 0 0 2rem 0;
+  color: #333;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.photoGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;
+}
+
+.photoPreview {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  height: 400px;
+  align-items: stretch;
+}
+
+.previewItem {
+  /*position: relative;*/
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  aspect-ratio: 1;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.previewItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.previewImage {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.previewImage:hover {
+  transform: scale(1.05);
+}
+
+/* New grid layout styles */
+.mainPhotoContainer {
+  position: relative;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.viewAllPhotosButton {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 2;
+}
+
+.mainPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+/* Removed hover effect since images are no longer clickable */
+
+.photoGridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.gridPhotoContainer {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8f9fa;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Removed hover effect since images are no longer clickable */
+
+.gridPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.morePhotosOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.photoItem {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 1;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Removed hover effect since images are no longer clickable */
+
+.morePhotos {
+  text-align: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+/* Add to List Modal Styles */
+.addToListModal {
+  max-width: 400px;
+}
+
+.addToListContent {
+  padding: 0;
+}
+
+.listOption {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.listOption:hover {
+  background-color: #f8f9fa;
+}
+
+.listOption:last-child {
+  margin-bottom: 0;
+}
+
+.listIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #f1f3f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.plusIcon {
+  font-size: 1.5rem;
+  color: #5f6368;
+  font-weight: bold;
+}
+
+.bookmarkIcon {
+  font-size: 1.2rem;
+}
+
+.listInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.listName {
+  font-weight: 500;
+  color: #202124;
+  font-size: 1rem;
+}
+
+.itemCount {
+  font-size: 0.875rem;
+  color: #5f6368;
+}
+
+.listActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addButton {
+  background-color: #b7bdc6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 60px;
+}
+
+.addButton:hover:not(:disabled) {
+  background-color: #6b6d70;
+  transform: translateY(-1px);
+}
+
+.addButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.checkIcon {
+  width: 24px;
+  height: 24px;
+  background-color: #34a853;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.modalActions {
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #dadce0;
+  margin-top: 1rem;
+}
+
+
+/* Create List Modal Styles */
+.createListModal {
+  max-width: 500px;
+}
+
+.createListContent {
+  padding: 1rem 0;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.inputLabel {
+  font-weight: 600;
+  color: #202124;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.listNameInput {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #dadce0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #202124;
+}
+
+.listNameInput:focus {
+  outline: none;
+  border-color: #b4b8bd;
+  box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.1);
+}
+
+.listNameInput::placeholder {
+  color: #5f6368;
+}
+
+.inputHint {
+  color: #5f6368;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  margin-top: 0.25rem;
+}
+
+.modalActions {
+  padding: 1.5rem 0 0 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  border-top: 1px solid #dadce0;
+  margin-top: 1.5rem;
+}
+
+
+
+@media (max-width: 300px) {
+  .plushContent {
+    padding: 1rem;
+  }
+  
+  .plushName {
+    font-size: 2rem;
+  }
+  
+  .plushStats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .plushActions {
+    flex-direction: column;
+  }
+  
+  .reviewHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  
+  .photoPreview {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    height: 350px;
+  }
+  
+  .photoGridContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    gap: 0.5rem;
+  }
+  
+  .mainPhotoContainer {
+    height: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  .viewAllPhotosButton {
+    bottom: 0.75rem;
+    left: 0.75rem;
+  }
+  
+  .photoGallery {
+    padding: 5rem;
+  }
+  
+  .galleryTitle {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* New Layout Styles for Share Section on Left */
+.photoGalleryWrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.photoDisplayContainer {
+  display: flex;
+  align-items: stretch;
+  gap: 1.5rem;
+  width: 100%;
+  height: 500px;
+}
+
+.originalPhotosSection {
+  flex: 1;
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.userPhotosSection {
+  flex: 0 0 30%;
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.userPhotosHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0rem;
+  padding-bottom: 0.75rem;
+  /*border-bottom: 1px solid #eee;*/
+}
+
+.userPhotosHeader h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.userPhotosGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+
+.showAllPhotosButton {
+  background: #f0f8ff !important;
+  color: #4a90e2 !important;
+  border: 1px solid #4a90e2 !important;
+  font-size: 0.85rem !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 20px !important;
+  transition: all 0.2s ease !important;
+}
+
+.showAllPhotosButton:hover {
+  background: #4a90e2 !important;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
+}
+
+.userPhotoItem {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  height: 100%;
+  width: 100%;
+}
+
+.userPhotoItem:hover {
+  transform: scale(1.02);
+}
+
+.userPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.showAllPhotosButtonOverlay {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  z-index: 10;
+}
+
+.showAllPhotosButtonOverlay .showAllPhotosButton {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #4a90e2 !important;
+  border: 1px solid rgba(74, 144, 226, 0.8) !important;
+  font-size: 0.75rem !important;
+  padding: 0.4rem 0.8rem !important;
+  border-radius: 16px !important;
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.showAllPhotosButtonOverlay .showAllPhotosButton:hover {
+  background: #4a90e2 !important;
+  color: white !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+}
+
+.userPhotoInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.userName {
+  font-weight: 500;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.uploadDate {
+  font-size: 0.7rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.noPhotosMessage {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #666;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.noPhotosMessage p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 100%;
+  width: 100%;
+}
+
+.morePhotosIndicator {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+.morePhotosIndicator span {
+  font-size: 0.8rem;
+  color: #666;
+  font-style: italic;
+}
+
+.loginPromptSmall {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #666;
+  padding: 2rem 1rem;
+}
+
+.loginPromptSmall p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Responsive adjustments for the new layout */
+@media (max-width: 768px) {
+  .photoDisplayContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .originalPhotosSection {
+    order: 1;
+    height: 400px;
+  }
+  
+  .userPhotosSection {
+    flex: none;
+    order: 2;
+    height: 300px;
+  }
+  
+  .userPhotosGrid {
+    max-height: 200px;
+  }
+}
+
+/* Simple Auto-Dismissing Modal Styles */
+.simpleModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.simpleModal {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+  animation: slideIn 0.3s ease-out;
+}
+
+.simpleModalContent {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Mobile screen responsive design */
+@media (max-width: 480px) {
+  .photoGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .simpleModalContent {
+    padding: 1.25rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}

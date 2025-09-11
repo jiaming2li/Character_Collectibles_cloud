@@ -1,0 +1,37 @@
+.main-header {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  backdrop-filter: none;
+  z-index: 5;
+  padding: 0 2rem;
+  position: absolute;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+main {
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    justify-content: flex-start;
+  }
+  
+  .nav-container {
+    justify-content: space-between;
+  }
+}
