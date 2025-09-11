@@ -21,7 +21,7 @@ const MIME_TYPE_MAP = {
 const s3Upload = multer({
   storage: multerS3({
     s3: s3,
-    bucket: "plushphoto",
+    bucket: "plushhub",
     // 移除 acl 设置，因为存储桶禁用了 ACL
     key: function (req, file, cb) {
       const fileExtension = MIME_TYPE_MAP[file.mimetype];

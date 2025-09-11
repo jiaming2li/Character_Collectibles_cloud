@@ -37,6 +37,7 @@ function PlushDetail() {
   const [userUploadedPhotos, setUserUploadedPhotos] = useState([]);
   const [currentUserInfo, setCurrentUserInfo] = useState(null);
   const [allUserPhotos, setAllUserPhotos] = useState([]);
+  const [plushPhotos, setPlushPhotos] = useState([]); // S3 plush-photos bucket images
   const [showPhotoUpload, setShowPhotoUpload] = useState(false);
   const [isUploadingPhoto, setIsUploadingPhoto] = useState(false);
   const [showSimpleModal, setShowSimpleModal] = useState(false);
@@ -87,6 +88,33 @@ function PlushDetail() {
     }
 
     fetchAllUserPhotos();
+  }, [plushId, sendRequest]);
+
+  // Get plush photos from S3 plush-photos bucket (official photos)
+  useEffect(() => {
+    async function fetchPlushPhotos() {
+      if (!plushId) {
+        console.log('Skipping plush photos fetch - missing plushId');
+        setPlushPhotos([]);
+        return;
+      }
+      
+      try {
+        console.log('Fetching plush photos for plushId:', plushId);
+        
+        const response = await sendRequest(
+          `${ENDPOINTS.PLUSH_PHOTOS}/${plushId}`
+        );
+        
+        console.log('Plush photos response:', response);
+        setPlushPhotos(response.photos || []);
+      } catch (error) {
+        console.error('Error fetching plush photos:', error);
+        setPlushPhotos([]);
+      }
+    }
+
+    fetchPlushPhotos();
   }, [plushId, sendRequest]);
 
   // Get current user photos uploaded for this plush
@@ -648,7 +676,7 @@ function PlushDetail() {
                   <div className={classes.sectionHeader}>
                     <h3>Plush Images</h3>
                     <span className={classes.photoCount}>
-                      {1 + allUserPhotos.length} Photos
+                      {1 + (plushPhotos?.length || 0)} Photos
                     </span>
                   </div>
                   <div className={classes.photoPreview}>
@@ -673,15 +701,17 @@ function PlushDetail() {
                       </div>
                     </div>
                     
-                    {/* Other images: Show plush photos from the database */}
-                    {allUserPhotos.length > 0 && (
+                    {/* Other images: Show plush photos from S3 plush-photos bucket */}
+                    {plushPhotos && plushPhotos.length > 0 && (
                       <div className={classes.photoGridContainer}>
-                        {allUserPhotos.slice(0, 4).map((photo, index) => (
-                          <div key={photo.id || index} className={classes.gridPhotoContainer}>
+                        {plushPhotos.slice(0, 4).map((photo, index) => (
+                          <div key={photo.imageUrl || index} className={classes.gridPhotoContainer}>
                             <img
                               src={photo.imageUrl.startsWith('http') 
                                 ? photo.imageUrl 
                                 : `${ASSET_BASE_URL}/${photo.imageUrl.replace('uploads/images/', '')}`}
+                              
+                        
                               alt={`${plush.name} - Photo ${index + 1}`}
                               className={classes.gridPhoto}
                               onError={(e) => {
@@ -690,13 +720,13 @@ function PlushDetail() {
                               }}
                             />
                             {/* If it's the last one and there are more photos, show 'more' overlay */}
-                            {index === 3 && allUserPhotos.length > 4 && (
+                            {index === 3 && plushPhotos.length > 4 && (
                               <div 
                                 className={classes.morePhotosOverlay}
                                 onClick={navigateToPhotosPage}
                                 style={{ cursor: 'pointer' }}
                               >
-                                +{allUserPhotos.length - 4}
+                                +{plushPhotos.length - 4}
                               </div>
                             )}
                           </div>

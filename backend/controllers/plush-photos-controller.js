@@ -137,7 +137,7 @@ async function uploadPlushPhoto(req, res, next) {
     // 如果保存失败，删除已上传到S3的文件
     if (req.file && req.file.key) {
       const deleteParams = {
-        Bucket: "plushphoto",
+        Bucket: "plushhub",
         Key: req.file.key
       };
       s3.deleteObject(deleteParams, (deleteErr) => {
@@ -177,7 +177,7 @@ async function deletePlushPhoto(req, res, next) {
       const key = urlParts[urlParts.length - 1];
       
       const deleteParams = {
-        Bucket: "plushphoto",
+        Bucket: "plushhub",
         Key: key
       };
       

@@ -60,8 +60,13 @@ app.use((error, req, res, next) => {
     .json({ message: error.message || "An error occurred!" });
 });
 
-// 使用环境变量配置数据库连接，支持本地和云端部署
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/mern-plush";
+// 使用云端MongoDB Atlas数据库连接
+const MONGODB_URI = process.env.MONGODB_URI;
+
+if (!MONGODB_URI) {
+  console.error("MONGODB_URI environment variable is required for cloud database connection");
+  process.exit(1);
+}
 
 mongoose
   .connect(MONGODB_URI, {
